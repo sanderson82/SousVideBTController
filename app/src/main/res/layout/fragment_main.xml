@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivityFragment">
+
+    <TextView
+        android:id="@+id/valueLabel"
+        android:text="Desired Water Temp in C:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:max="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/valueLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="26dp" />
+
+    <RelativeLayout
+        android:id="@+id/seekbarrange"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar1"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/tvLabel1"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+        <TextView
+            android:id="@+id/tvLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="50" />
+        <TextView
+            android:id="@+id/tvLabel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:text="100" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_below="@+id/seekbarrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="Result" />
+
+    <TextView
+        android:id="@+id/currentTempLabel"
+        android:layout_below="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="Current Temp is: " />
+
+    <TextView
+        android:id="@+id/currentTemp"
+        android:layout_below="@+id/currentTempLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:gravity="bottom"
+        android:text="" />
+
+    <Button
+        android:id="@+id/connectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currentTemp"
+        android:text="Connect"
+        />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/connectButton">
+    <TextView
+        android:id="@+id/statusMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:text="Status" />
+    </ScrollView>
+</RelativeLayout>
